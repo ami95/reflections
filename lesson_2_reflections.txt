@@ -5,3 +5,14 @@ What happens when you initialize a repository? Why do you need to do it?
 	I need to run the "git init" command whenever I create a new 
 	project and I want to use github on it. (This is not necessary
 	to do when I clone a project, as it already has a .git folder)
+
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	The staging area is different from the working directory in it's nature of "purgatory like place", when 
+	the working directory is the hell and damnation where from the suffering and screaming of the damned 
+	a piece of heaven is created, we first test these potential pieces of heaven just like Jesus said 
+	about testing something through fire. This is why we need a staging area, so we won't mix any bad 
+	things from hell into heaven. 
+	It(the staging area) is also useful because it allows as to choose which/how many files we will update 
+	in a single "commit".
