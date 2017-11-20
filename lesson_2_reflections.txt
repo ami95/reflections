@@ -1,0 +1,7 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+	When I initialize a repository, a hidden folder (.git) is created.
+	There, the entire history of my project will be saved.
+	I need to run the "git init" command whenever I create a new 
+	project and I want to use github on it. (This is not necessary
+	to do when I clone a project, as it already has a .git folder)
