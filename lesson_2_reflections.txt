@@ -1,71 +1,82 @@
-What happens when you initialize a repository? Why do you need to do it?
+1. What happens when you initialize a repository? Why do you need to do it?
 
 	When I initialize a repository, a hidden folder (.git) is created.
 	There, the entire history of my project will be saved.
-	I need to run the "git init" command whenever I create a new 
-	project and I want to use github on it. (This is not necessary
-	to do when I clone a project, as it already has a .git folder)
+	I must run the "git init" command whenever I create a new 
+	project and I want to add a git repository to it. 
+	(This is not necessary to do when I clone a project, as it usualy 
+	already has a .git folder)
 
 
-How is the staging area different from the working directory and the repository? What value do you think it offers?
+2. How is the staging area different from the working directory and the 
+repository? What value do you think it offers?
 
-	The staging area is different from the working directory in it's nature of "purgatory like place", when 
-	the working directory is the hell and damnation where from the suffering and screaming of the damned 
-	a piece of heaven is created, we first test these potential pieces of heaven just like Jesus said 
-	about testing something through fire. This is why we need a staging area, so we won't mix any bad 
-	things from hell into heaven. 
-	It(the staging area) is also useful because it allows as to choose which/how many files we will update 
-	in a single "commit".
+	The staging area is different from the working directory in it's nature of 
+	"purgatory like place", when the working directory is the hell and 
+	damnation where from the suffering and screaming of the tortured souls 
+	a "piece of heaven" is created. 
+	We first test these potential "pieces of heaven" just like Jesus said 
+	about testing something through fire in order to prove it's noble nature. 
+	This is why we need a staging area, so we won't mix any bad things from 
+	hell into heaven. 
+	The staging area is also useful because it allows us to choose which/how 
+	many files we will update in a single "commit".
 
 
-How can you use the staging area to make sure you have one commit per logical change?
+3. How can you use the staging area to make sure you have one commit per 
+logical change?
 
-	I could only add the files I want to commit in the staging area, thus leaving the unrelated files
-	to be commited alone or with the files that correspond to the same logical change.
+	I could only add the files I want to commit in the staging area, thus 
+	leaving the unrelated files to be commited alone or with the files that 
+	correspond to the same logical change.
 	
 
-What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+4. What are some situations when branches would be helpful in keeping your 
+history organized? How would branches help?
 
-	When I would like to add an experimental feature to my project, or when I'd like to have a paralel
-	version of my project that might require other features(for example, an italian version aimed at 
-	italian people)
+	When I would like to add an experimental feature to my project, or when 
+	I'd like to have a paralel version of my project that might require other 
+	features(for example, an italian version aimed at italian people)
 
-How do the diagrams help you visualize the branch structure?
+5. How do the diagrams help you visualize the branch structure?
 
-	The diagrams help me visualize the branch structure by allowing me a 2D view of all the commits,
-	their parents and the different branches or detached heads that exist in my project.
-
-
-What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
-
-	When we merge two branches together, for each file, all the new added lines will be saved on top of 
-	all the not-deleted lines. 
-	We represent it in the diagram by merging the side-branch into the master branch, and deleting the 
-	old branch name, because we will then have access to the commits from both merged branches.
-
-What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
-
-	It can spare us alot of time, and it also asks us to verify conflicts whenever git doesen't know
-	for shure what to keep and what to remove in the final version of a merge.
+	By drawing a diagram I can visualize the branch structure, having a clear
+	view of all the commits,their parents and the different branches or 
+	"detached heads" that exist in my project.
 
 
+6. What is the result of merging two branches together? Why do we represent it 
+in the diagram the way we do?
+
+	The result is the incorporation of all the features from both branches into
+	a new one.
+	We represent it the diagram like that because they are both merged into a 
+	new head, still having acces to all the former commits.
+
+7. What are the pros and cons of Git’s automatic merging vs. always doing 
+merges manually?
+
+	It can spare us alot of time, and it also asks us to verify conflicts 
+	whenever git doesen't know for shure what to keep and what to remove in the
+	final version of a merge.
+
+
+Thank you @Denyos for the 
 Commands:
 
-git add  |    Add a file to the staging area
+git add 	|    Add a file to the staging area
 git commit  |    Commit the files from the staging area to the repository 
 git status  |    Show which files are in the staging area, and which files from the working directory are not part of the repository    
-git diff  |    Git diff without arguments is comparing the working directory with the staging area
-git diff --staged  |    Compare the staging area with the repository
-git reset --hard  |    Undo all changes! There is no rollback for this, so be carefull!
+git diff  	|    Git diff without arguments is comparing the working directory with the staging area
+git diff --staged    |    Compare the staging area with the repository
+git reset --hard     |    Undo all changes! There is no rollback for this, so be carefull!
 git checkout master  |    Restore the "Head" to the latest check-in (this will be part of a later lesson/module)
+git checkout -b new_branch_name                |    Creates a new branch and does a checkout on this branch in one call instead of 
+													(git branch new_branch_name + git checkout new_branch_name)
 git log --graph --oneline <branch1> <branch2>  |    Show a visual representation of the commit history within different branches
-git checkout -b new_branch_name  |    Creates a new branch and do a checkout on this branch in one call instead of 
-	git branch new_branch_name 
-	and 
-	git checkout new_branch_name
-git merge branch1 branch2  |    Merge two branches, branch2 get merged into branch1
-git branch -d name  |    Remove the branch with the specified name
-git show commitId | Show the changes made in this commit compared to the previous version. This is working even after merging.
+git merge branch1 branch2  |    Merge two branches, branch2 gets merged into branch1
+git branch -d name         |    Remove the branch with the specified name
+git show commitId          | Show the changes made in this commit compared to the previous version. This is working even after merging.
 
 
 
