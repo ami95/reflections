@@ -29,3 +29,36 @@ What are some situations when branches would be helpful in keeping your history 
 	When I would like to add an experimental feature to my project, or when I'd like to have a paralel
 	version of my project that might require other features(for example, an italian version aimed at 
 	italian people)
+
+How do the diagrams help you visualize the branch structure?
+
+	The diagrams help me visualize the branch structure by allowing me a 2D view of all the commits,
+	their parents and the different branches or detached heads that exist in my project.
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+	When we merge two branches together, for each file, all the new added lines will be saved on top of 
+	all the not-deleted lines. 
+	We represent it in the diagram by merging the side-branch into the master branch, and deleting the 
+	old branch name, because we will then have access to the commits from both merged branches.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+	It can spare us alot of time, and it also asks us to verify conflicts whenever git doesen't know
+	for shure what to keep and what to remove in the final version of a merge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
