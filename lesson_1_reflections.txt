@@ -1,82 +1,83 @@
-How did viewing a diff between two versions of a file help you see the bug that
+1. How did viewing a diff between two versions of a file help you see the bug that
 was introduced?
 
-	The "+" and "-" signs designating the old and new line made it easy. Also 
-	thefact that the different lines were printed on two consecutive rows.
+	By seing only the modified lines with a "+" and "-" sign in front of them 
+	spared me the effort of manually checking each line of code in a document 
+	that might have had a big number of lines.
 
-How could having easy access to the entire history of a file make you a more
+
+2. How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-    It could do that because it allows me to spot the differences between 
-    different versions of code much faster than by manually checking 
-    line-by-line.
+    It will help me reflect on my old ways of doing things, and see clearly
+    where I did good, and where I did wrong.
+    I could also save old ideas that didn't work at the time because of my 
+    limited experience, and implement them in future projects.
 
-What do you think are the pros and cons of manually choosing when to create a
+
+3. What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
 docs does?
 
-    The pros: - You can decide for yourself when to commit something, according
-    			to your own needs and criteria
-    The cons: - You could forget to commit something important
+	(manually choosing when to create a commit)
+    The pros: - updating documents according to your own needs, in terms of 
+    			frequency, quantity or logical changes;
+    		  - difference between versions is easier to spot;
+    		  - adding a personalized commit message that will appear in the
+    		  	commit history when running "git log";
 
-Why do you think some version control systems, like Git, allow saving multiple
+    The cons: - forgeting to commit your changes, and accidentally runing
+    			the "git reset --hard" command;
+
+    (having versions automatically saved, like Google docs does)
+    The pros: - not having to worry about forgeting to commit some changes;
+
+    The cons: - lack of flexibility;
+    		  - the danger of having some unwanted changes commited without
+    		  	your concent;
+
+
+4. Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-    Git has a special way of saving files, that makes it more efficient.
+	Git allows saving multiple files in one commit because it specially designed 
+	for programmers. Very frequently, a logical change in a programming project 
+	will imply modifications in more than one file.
 
-How can you use the commands git log and git diff to view the history of files?
 
-   https://www.git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+5. How can you use the commands git log and git diff to view the history of files?
 
-How might using version control make you more confident to make changes that
+	"git log"  - shows a list with all the commits made on the current branch
+	"git diff" - will show you all the different lines between the files
+				 in the working directory and the ones in repository;
+			   - you can also use it to check what lines were modified between 
+			   	 two different commits by adding their IDs next to the command,
+			   	 like this: "git diff old-commit-ID new-commit-ID"
+
+6. How might using version control make you more confident to make changes that
 could break something?
 
-    It could do that by giving me the certainty that I can always click the
-    "undo" button, and have the code the same as it was before the changes.
-
-Now that you have your workspace set up, what do you want to try using Git for?
-
-    I would love to use Git for my future projects in order to build myself
-    a beautiful portfolio, that will impress future partners, on GitHub
+	Using git makes me confident to make changes to a file without worrying
+	that I might break something because if I make a new commit per each
+	logical change, I can always track back to a version of my project where
+	everything worked just fine.
 
 
-How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+7. Now that you have your workspace set up, what do you want to try using Git for?
 
-	I could see what worked on earlyer versions and what didn't, I could decide to 
-	add an old feature into the new version.
-	I can also see my old ways of coding, and see my misstakes, thus improoving 
-	my coding skills.
-
-What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
-
-	pro - I could structure the commit frequency according to logical changes. 
-		This practice makes differences between versions easier to spot.
-
-	con - forgeting to commit
-
-	Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
-
-	Git does that because it was specially designed for programmers. Sometimes one logical change in an application
-	may imply modifications in multiple files of the project.
+    I would like using git to make a new reflections repository whenever I learn
+    something new, and update it frequently, so that I and others interested in 
+    that field can look back on it and refine our knowledge.
+    I would also love to update my gitHub portfolio with beautiful projects, 
+    and meet other like-minded people :)
 
 
-How can you use the commands git log and git diff to view the history of files?
-
-	From the gitConsole, making shure that we are in the right repository, by typing git log, we will see a history of all 
-	changes. "git log --stat" will give you a more detailed history(including the names of the modified files and number of
-	modified lines).
-
-	The "git diff" command is used when we want to see the differences between two different versions of our project.
-	The sintax of the command is the following: "git diff id_commit_old id_commit_new"
-
-
-How might using version control make you more confident to make changes that could break something?
-
-	By knowing that I can use the "git checkout" command to get back to a previous state of the project,
-	I can make any changes I want without having to worry that I might make an unfixable misstake 
-
-Now that you have your workspace set up, what do you want to try using Git for?
-	I want to use git to help me complete the Full Stack Foundations Tutorial
-	https://classroom.udacity.com/courses/ud088/lessons/3621198668/concepts/35960790720923
-	After that I will use it still for all my future projects because it is a
-	neat and tidy way of managing my modifications.
+Thank you @Denyos for the 
+Commands:
+q |    exit git log!
+git log  |    List the commits and show which files have changed
+git log --stat  |    Show addition information about the commits
+git diff id1 id2  |    Compare two commits
+git clone  |    Create a local copy/clone from the repository
+git config --global color.ui auto |    get colored diff output
+git checkout | Shows a previous version of the file. This is not a checkout to edit like in SVN or TFS!
